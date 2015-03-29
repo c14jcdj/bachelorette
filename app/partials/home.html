@@ -1,0 +1,19 @@
+<div ng-controller="tabController as tab" style="padding: 0 20px" >
+	
+	<section  >
+		<ul class="nav nav-pills">
+			<li ng-class="{active:tab.num===1}"><a href ng-click="tab.setTab(1)">Long Term Picks</a></li>
+			<li ng-class="{active:tab.num===2}"><a href ng-click="tab.setTab(2)">Weekly Picks</a></li>
+			<li ng-class="{active:tab.num===3}"><a href ng-click="tab.setTab(3)">Questions</a></li>
+		</ul>
+	</section>
+	<div class="panel" ng-show="tab.num === 1">
+		<long-term-pick></long-term-pick>
+	</div>
+	<div class="panel" ng-show="tab.num === 2" >
+		<weekly-pick></weekly-pick>
+	</div>
+	<div class="panel" ng-show="tab.num === 3">
+		<game-questions></game-questions>
+	</div>
+</div>
